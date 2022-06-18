@@ -1622,14 +1622,14 @@
 <span class="sd">        </span>
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([a, b, c])</span>
+<span class="sd">    &gt;&gt;&gt; x = ivy.array([2, 3, 4])</span>
 <span class="sd">    &gt;&gt;&gt; ivy.cumprod(x)</span>
-<span class="sd">    [a, a * b, a * b * c]</span>
+<span class="sd">    [2, 6, 24]</span>
 
-<span class="sd">    &gt;&gt;&gt; y = ivy.array([a, b, c])</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.array([2, 3, 4])</span>
 <span class="sd">    &gt;&gt;&gt; exclusive = True</span>
 <span class="sd">    &gt;&gt;&gt; ivy.cumprod(y, exclusive)</span>
-<span class="sd">    [1, a, a * b]</span>
+<span class="sd">    [1, 2, 6]</span>
 <span class="sd">    </span>
 <span class="sd">    Example specifying axes</span>
 <span class="sd">    </span>
@@ -1642,7 +1642,7 @@
 <span class="sd">     </span>
 <span class="sd">    &gt;&gt;&gt; z = ivy.array([[2,3],[5,7],[11,13]])</span>
 <span class="sd">    &gt;&gt;&gt; exclusive = True</span>
-<span class="sd">    &gt;&gt;&gt; ivy.cumprod(z, axis=1, exclusive)</span>
+<span class="sd">    &gt;&gt;&gt; ivy.cumprod(z, axis=0, exclusive)</span>
 <span class="sd">    [[ 1,  2],</span>
 <span class="sd">     [ 2,  3],</span>
 <span class="sd">     [10, 21]]</span>
