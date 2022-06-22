@@ -1948,8 +1948,8 @@
 <span class="sd">    ivy.array([2, 6, 24])</span>
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([2, 3, 4])</span>
-<span class="sd">    &gt;&gt;&gt; exclusive = True</span>
-<span class="sd">    &gt;&gt;&gt; y = ivy.cumprod(x, exclusive)</span>
+<span class="sd">    &gt;&gt;&gt; exclusivity = True</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.cumprod(x, exclusive=exclusivity)</span>
 <span class="sd">    &gt;&gt;&gt; print(y)</span>
 <span class="sd">    ivy.array([1, 2, 6])</span>
 <span class="sd">    </span>
@@ -1958,8 +1958,8 @@
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[2, 3], \</span>
 <span class="sd">                       [5, 7], \</span>
 <span class="sd">                       [11, 13]])</span>
-<span class="sd">    &gt;&gt;&gt; exclusive = True</span>
-<span class="sd">    &gt;&gt;&gt; ivy.cumprod(x, axis=1, exclusive, out=y)</span>
+<span class="sd">    &gt;&gt;&gt; exclusivity = True</span>
+<span class="sd">    &gt;&gt;&gt; ivy.cumprod(x, axis=1, exclusive=exclusivity, out=y)</span>
 <span class="sd">    &gt;&gt;&gt; print(y)</span>
 <span class="sd">    ivy.array([[1,  2], </span>
 <span class="sd">               [1,  5], </span>
@@ -1968,8 +1968,8 @@
 <span class="sd">    &gt;&gt;&gt; x = ivy.array([[2, 3], \</span>
 <span class="sd">                       [5, 7], \</span>
 <span class="sd">                       [11, 13]])</span>
-<span class="sd">    &gt;&gt;&gt; exclusive = True</span>
-<span class="sd">    &gt;&gt;&gt; ivy.cumprod(x, axis=0, exclusive, out=x)</span>
+<span class="sd">    &gt;&gt;&gt; exclusivity = True</span>
+<span class="sd">    &gt;&gt;&gt; ivy.cumprod(x, axis=0, exclusive=exclusivity, out=x)</span>
 <span class="sd">    &gt;&gt;&gt; print(x)</span>
 <span class="sd">    ivy.array([[1,  2], </span>
 <span class="sd">               [2,  3], </span>
@@ -1978,7 +1978,7 @@
 <span class="sd">     </span>
 <span class="sd">     With :code:`ivy.NativeArray` input:</span>
 <span class="sd">     </span>
-<span class="sd">     &gt;&gt;&gt; x = ivy.Native_array([2, 3, 4])</span>
+<span class="sd">     &gt;&gt;&gt; x = ivy.native_array([2, 3, 4])</span>
 <span class="sd">     &gt;&gt;&gt; y = ivy.cumprod(x)</span>
 <span class="sd">     &gt;&gt;&gt; print(y)</span>
 <span class="sd">     ivy.array([2, 6, 24])</span>
@@ -1989,7 +1989,7 @@
 <span class="sd">     &gt;&gt;&gt; y = ivy.cumprod(x)</span>
 <span class="sd">     &gt;&gt;&gt; print(y)</span>
 <span class="sd">     {</span>
-<span class="sd">         a: ivy.array([2, 6, 24])</span>
+<span class="sd">         a: ivy.array([2, 6, 24]),</span>
 <span class="sd">         b: ivy.array([3, 12, 60])</span>
 <span class="sd">     }</span>
 
